@@ -35,9 +35,9 @@ that's exactly where the leverage is.
 ## Setup (3 min)
 
 - Make sure the **Filesystem connector** can see the workshop folder.
-- Install the two skills (same way as Module 04):
-  [`solution/planner/`](solution/planner/SKILL.md) and
-  [`solution/refine/`](solution/refine/SKILL.md).
+- Install the two skills the same way as Module 04 (zip the folder so `SKILL.md`
+  is at the top, then **Settings → Capabilities → Upload skill**):
+  [`solution/planner/`](solution/planner/) and [`solution/refine/`](solution/refine/).
 - Skim the worked example: [`sandbox/specs/EXAMPLE-decimal-numbers.md`](../../sandbox/specs/EXAMPLE-decimal-numbers.md).
   That's what a finished spec looks like.
 

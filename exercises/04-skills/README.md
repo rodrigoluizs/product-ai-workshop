@@ -36,9 +36,13 @@ summary.
 
 ## Exercise A — Install and trigger a Skill (8 min)
 
-1. In Claude Desktop: **Settings → Capabilities / Skills → add a skill.**
-2. Add the `pirate-speak` skill from
-   [`solution/pirate-speak/`](solution/pirate-speak/SKILL.md).
+Skills are uploaded to Claude Desktop as a **`.zip`** of the skill folder.
+
+1. Zip the [`solution/pirate-speak/`](solution/pirate-speak/) folder so that
+   `SKILL.md` sits at the top of the zip. (Or just ask Claude, with the Filesystem
+   connector on: *"Zip the exercises/04-skills/solution/pirate-speak folder for me."*)
+2. In Claude Desktop: **Settings → Capabilities → Upload skill**, and pick that zip.
+   (Code execution must be enabled — see SETUP.md.)
 3. In a normal chat, type: *"Piraterize this: Hello team, the deploy is delayed."*
 4. Claude should rewrite it in pirate dialect **without** you explaining how —
    the skill's description matched your request.

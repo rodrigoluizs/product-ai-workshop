@@ -17,8 +17,13 @@ You'll install four things and connect them:
 
 - Download from **https://claude.ai/download** (macOS or Windows).
 - Sign in with your account.
-- Open **Settings** and confirm you can see **Connectors** and **Capabilities /
-  Skills** — we'll use both.
+- Open **Settings → Capabilities** and turn on **Code execution and file
+  creation** (required to use Skills). Skills are uploaded here later.
+- Confirm you can also see **Connectors** in Settings — we'll use those too.
+
+> Skills upload requires a paid plan (Pro/Max/Team/Enterprise). If you're on a
+> free plan, pair up with someone for the Skills modules — you can still do
+> everything else.
 
 > We are **not** using Claude Code (the developer command-line tool) in this
 > workshop. Just the Claude Desktop app.
