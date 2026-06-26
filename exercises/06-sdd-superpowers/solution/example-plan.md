@@ -10,48 +10,49 @@
 
 **Goal:** Add round-parenthesis grouping to the calculator.
 
-**Architecture:** Extend the lexer with two token types and the parser's `factor`
-rule with a `'(' expr ')'` alternative. AST and evaluator unchanged.
+**Architecture:** `tokenize` emits `(` and `)`; `evaluate` resolves the innermost
+`( … )` first (reusing itself), then runs the existing precedence passes.
 
-**Tech Stack:** TypeScript (strict), Vitest, ESM.
+**Tech Stack:** Python 3, pytest.
 
 ## Global Constraints
 
-- No new dependencies. npm + tsc + Vitest only.
-- No new AST node kind; grouping is encoded by tree shape.
-- Errors throw `Error`; the REPL stays the single catch point.
+- No new dependencies; standard library only.
+- Don't use `eval()`.
+- Errors raise `ValueError`; `main()` stays the single catch point.
 
 ---
 
-### Task 1: Lex parentheses
+### Task 1: Tokenize parentheses
 
-**Files:** Modify `src/lexer.ts`; Test `tests/lexer.test.ts`
+**Files:** Modify `calc.py` (`tokenize`); Test `test_calc.py`
 
-- [ ] **Step 1 — failing test:** add `it("tokenizes parentheses")` expecting `"()"`
-  → tokens `LPAREN, RPAREN, END`.
-- [ ] **Step 2 — run it, confirm it fails** (`LPAREN` undefined).
-- [ ] **Step 3 — implement:** add `LPAREN`/`RPAREN` to the token enum and emit them
-  for `(` and `)` in the scan loop.
+- [ ] **Step 1 — failing test:** add `test_tokenizes_parentheses` expecting
+  `tokenize("()")` to contain the `"("` and `")"` tokens.
+- [ ] **Step 2 — run it, confirm it fails** (today `(` raises `ValueError`).
+- [ ] **Step 3 — implement:** in `tokenize`, treat `(` and `)` as their own tokens
+  instead of raising.
 - [ ] **Step 4 — run tests, confirm pass.**
-- [ ] **Step 5 — commit:** `feat: lex parentheses`.
+- [ ] **Step 5 — commit:** `feat: tokenize parentheses`.
 
-### Task 2: Parse grouped expressions
+### Task 2: Resolve parentheses in evaluate
 
-**Files:** Modify `src/parser.ts`; Test `tests/parser.test.ts`
+**Files:** Modify `calc.py` (`evaluate`); Test `test_calc.py`
 
-- [ ] **Step 1 — failing tests:** `"(1+2)*3"` → `Mul(Add(1,2),3)`; `"(1+2"` →
-  throws; `"()"` → throws.
+- [ ] **Step 1 — failing tests:** `calculate("(1 + 2) * 3")` → `9`;
+  `calculate("(1 + 2")` raises `ValueError`; `calculate("()")` raises `ValueError`.
 - [ ] **Step 2 — run, confirm fail.**
-- [ ] **Step 3 — implement:** in `parseFactor()`, on `LPAREN` consume it, recurse
-  into `parseExpr()`, then require `RPAREN`; throw `Error` on missing/empty.
+- [ ] **Step 3 — implement:** before the existing passes, repeatedly find the
+  innermost `( … )`, evaluate the inside with `evaluate`, and replace the span with
+  the result; raise `ValueError` on a missing/empty pair.
 - [ ] **Step 4 — run tests, confirm pass.**
-- [ ] **Step 5 — commit:** `feat: parse parenthesized expressions`.
+- [ ] **Step 5 — commit:** `feat: evaluate parenthesized groups`.
 
-### Task 3: End-to-end evaluation + regression
+### Task 3: Nesting + regression
 
-**Files:** Test `tests/evaluator.test.ts`
+**Files:** Test `test_calc.py`
 
-- [ ] **Step 1 — tests:** `(1+2)*3`→9, `2*(3+4)`→14, `((1+2)*(3+4))`→21,
-  `(2+3)*(4-1)`→15, and regression `1+2*3`→7.
-- [ ] **Step 2 — run; they should pass** with Tasks 1–2 done (no eval change needed).
-- [ ] **Step 3 — commit:** `test: parentheses end-to-end + regression`.
+- [ ] **Step 1 — tests:** `((1 + 2) * (3 + 4))` → `21`; `(2 + 3) * (4 - 1)` → `15`;
+  regression `1 + 2 * 3` → `7`.
+- [ ] **Step 2 — run; they should pass** with Tasks 1–2 done.
+- [ ] **Step 3 — commit:** `test: nested parentheses + regression`.

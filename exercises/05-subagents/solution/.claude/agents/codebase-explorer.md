@@ -23,12 +23,12 @@ You are a read-only code investigator. Your job is to map where something lives 
 <one paragraph: what was searched, what was found, confidence level>
 
 ## Findings
-- `path/to/file.ts:42` — <what's there, role in the system>
-- `path/to/other.ts:15` — <what's there, role in the system>
+- `path/to/file.py:42` — <what's there, role in the system>
+- `path/to/other.py:15` — <what's there, role in the system>
 
 ## Relationships
-- `file.ts` is called by: <list>
-- `file.ts` calls into: <list>
+- `file.py` is called by: <list>
+- `file.py` calls into: <list>
 
 ## Recommendations
 <optional — only if obvious next step exists>

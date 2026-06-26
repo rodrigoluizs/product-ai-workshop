@@ -1,39 +1,35 @@
 # calc — Workshop Sandbox
 
-A minimal TypeScript command-line calculator: a lexer + a recursive-descent
-parser + a tree-walking evaluator + a small REPL (the interactive prompt).
+A tiny Python command-line calculator, small enough to read in a couple of
+minutes. In this workshop it's just a realistic codebase that Claude can *read*
+so we can practice planning a change against it.
 
-**You do not need to understand or run this code.** In this workshop it is just
-a small, realistic codebase that Claude can *read* so we can practice planning a
-change against real files. A facilitator may run it on screen; participants are
-never asked to build or test it.
+**You do not need to run this code.** A facilitator may run it on screen;
+participants are never asked to build or test it.
 
-## What it does (for the curious)
+## What it does
 
 It evaluates simple math typed at a prompt:
 
 ```
-> 1+2*3
+> 1 + 2 * 3
 7
-> 10/2
+> 10 / 2
 5
-> 1/0
-error: division by zero
+> 1 / 0
+error: Cannot divide by zero
 ```
 
-It handles `+ - * /`, multiplication before addition, and whole numbers only.
+It handles `+ - * /`, does multiplication/division before addition/subtraction,
+and works with whole numbers and decimals. It does **not** support parentheses —
+that's the feature we plan in Module 06.
 
 ## Layout
 
 ```
-src/
-  lexer.ts        turns the typed text into tokens (NUMBER, PLUS, MINUS, ...)
-  parser.ts       turns tokens into a tree the computer can evaluate
-  evaluator.ts    walks the tree and returns the number
-  main.ts         the interactive prompt (REPL)
-tests/            automated checks, one file per source file
-package.json      project metadata and scripts
-CLAUDE.md         always-on context, auto-loaded by the Code feature (read this — it is the lesson)
+calc.py         the calculator: tokenize -> evaluate -> print, plus the prompt
+test_calc.py    the tests (one per behavior)
+CLAUDE.md       always-on context, auto-loaded by the Code feature (read this — it is the lesson)
 ```
 
 In Module 06, the Superpowers skills write their design spec and plan under
@@ -42,8 +38,7 @@ In Module 06, the Superpowers skills write their design spec and plan under
 ## If a facilitator wants to run it
 
 ```bash
-npm install
-npm run build
-npm test       # all tests should pass
-npm run repl   # try the calculator yourself
+python3 calc.py        # try the calculator
+pip install pytest     # one-time, if needed
+pytest                 # run the tests — all should pass
 ```
