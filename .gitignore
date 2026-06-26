@@ -1,0 +1,8 @@
+# Dependencies / build output (sandbox is read-only context; no need to commit these)
+node_modules/
+dist/
+
+# Editor / OS noise
+.idea/
+.vscode/
+.DS_Store
