@@ -20,7 +20,6 @@ Keep this. It's the whole workshop on one page.
 | **Skill** | `.claude/skills/` | a request matches its description |
 | **Rule** | `.claude/rules/` | you work on a file matching its glob |
 | **Subagent** | `.claude/agents/` | the agent delegates a focused job |
-| **Hook** | `.claude/settings.json` | a specific event fires (automatic) |
 
 > All of these **auto-load when you open the folder** — but only at **session
 > start**. Change one? Start a new session.
@@ -49,13 +48,16 @@ Or just ask Claude in the Code feature:
 Undo anything:
 > "Discard my uncommitted changes and switch me back to a clean main."
 
-## Spec-first factory
+## Spec-first with Superpowers
 
 ```
-idea → planner → ## High-Level Plan → refine → ## Refined Plan → implement
+idea → brainstorming → design spec → writing-plans → plan → execute
 ```
-The hand-off is the **exact heading**. The plan is a document you review — not a
-disposable chat. You own the planning stages.
+Each arrow is a **gate**: no code until you approve the design; no execution until
+the plan is reviewed. The spec and plan are durable documents, not a disposable
+chat. You own brainstorming and plan review — the decisions that matter.
+
+Install: `/plugin` → `superpowers`. Start with: *"Let's brainstorm <feature>."*
 
 ## Skills: what makes one good
 

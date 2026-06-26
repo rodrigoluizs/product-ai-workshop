@@ -10,8 +10,8 @@ start of the session — you don't have to paste or attach it.
 ## What this is
 
 A tiny TypeScript command-line calculator used as the shared codebase for the
-spec-first ("factory") exercise. We plan a change against this code; we do not
-need to ship it.
+spec-first exercise (Module 06, with the Superpowers skills). We design and plan a
+change against this code; we do not need to ship it by hand.
 
 ## File layout
 
@@ -21,22 +21,10 @@ src/parser.ts       Recursive descent. AST = interface Node { kind, value, op, l
 src/evaluator.ts    Walks the AST, returns a number. Throws Error on divide-by-zero.
 src/main.ts         The REPL. Catches Error, prints it, keeps going.
 tests/*.test.ts     One test file per source module.
-specs/<name>.md     One spec per feature — the plan artifacts (see below).
-.claude/skills/     The planner and refine skills (auto-loaded here).
 ```
 
-## How the "factory" produces a spec
-
-A **spec** is a plain markdown file in `specs/`. It is filled in two stages, and
-the contract between stages is the exact section headings:
-
-1. **planner** skill writes a `## High-Level Plan` section (approach + acceptance
-   criteria, no file paths yet).
-2. **refine** skill reads `## High-Level Plan` and appends a `## Refined Plan`
-   section (the concrete files to touch + a test sketch).
-
-Each stage *appends* its section; it never rewrites the file. The headings are
-the hand-off contract — that is the whole point of the exercise.
+In the spec-first module, Superpowers writes its design spec and implementation
+plan under `docs/superpowers/` here.
 
 ## Stack conventions (so Claude matches the existing code)
 

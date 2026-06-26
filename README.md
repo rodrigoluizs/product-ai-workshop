@@ -11,9 +11,9 @@ delegate to Subagents, and plan a real change before any code is written.
 > **Adapted from** the engineering bootcamp
 > `hackersandwizards/dev-bootcamp-factory-workshop`. This version is rebuilt for a
 > non-technical audience, trimmed to 4 hours, translated fully into English, and
-> simplified (plain markdown specs instead of a CLI tool). Everything runs in the
-> Code feature, so the real Claude Code mechanisms — `CLAUDE.md`, Skills, Rules,
-> Subagents, Hooks — all work hands-on.
+> simplified for the audience. Everything runs in the Code feature, so the real
+> Claude Code mechanisms — `CLAUDE.md`, Skills, Rules, Subagents — all work
+> hands-on, and the spec-first module uses the open-source **Superpowers** skills.
 
 ## Why the "Code feature" and not regular chat?
 
@@ -35,9 +35,8 @@ seriously for real product work, and have little or no Git/GitHub experience.
 - Build and trigger a **Skill** (reusable know-how).
 - Scope conventions to document types with **Rules**.
 - Delegate exploration to a **Subagent**.
-- Run a lightweight **spec-first** workflow: plan a change as a durable artifact
-  before anyone builds it.
-- Understand **Hooks** and when you'd reach for them.
+- Run a lightweight **spec-first** workflow with **Superpowers**: brainstorm a
+  design, turn it into a reviewed plan, then hand off to implementation.
 
 ## The 4-hour agenda
 
@@ -51,8 +50,8 @@ seriously for real product work, and have little or no Git/GitHub experience.
 | 2:10–2:20 | Break | |
 | 2:20–2:40 | [04 · Rules](exercises/04-rules/README.md) | hands-on |
 | 2:40–3:00 | [05 · Subagents](exercises/05-subagents/README.md) | hands-on |
-| 3:00–3:45 | [06 · Spec-first factory](exercises/06-sdd-factory/README.md) | hands-on |
-| 3:45–4:00 | [07 · Hooks demo](exercises/07-hooks-demo/README.md) + wrap + [cheat sheet](CHEATSHEET.md) | demo |
+| 3:00–3:50 | [06 · Spec-first with Superpowers](exercises/06-sdd-superpowers/README.md) | hands-on |
+| 3:50–4:00 | Wrap + [cheat sheet](CHEATSHEET.md) | |
 
 ## Before you arrive
 
@@ -67,9 +66,9 @@ README.md         you are here
 SETUP.md          one-time setup (do this before the workshop)
 FACILITATOR.md    run-of-show and talking points (for the person teaching)
 CHEATSHEET.md     one-page handout for participants
-exercises/        the seven modules, in order — each with exercise/ + solution/
-sandbox/          a tiny calculator codebase (with CLAUDE.md + planner/refine skills)
-                  used by the spec-first module
+exercises/        the six modules, in order — each with exercise/ + solution/
+sandbox/          a tiny calculator codebase (with CLAUDE.md) used by the
+                  spec-first module
 ```
 
 ## How each exercise folder is laid out

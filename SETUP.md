@@ -64,6 +64,19 @@ Test it: in that session, ask —
 If Claude lists the files and summarizes the calculator's context note, you're
 ready. ✅
 
+## 5. Install the Superpowers plugin (for Module 06)
+
+Superpowers is a free, open-source set of Claude skills we use for the spec-first
+module. In the Code feature:
+
+- Type **`/plugin`** to open the plugin manager.
+- In the **Discover / marketplace** list, find **`superpowers`** (official Claude
+  marketplace) and install it.
+- Start a new session so it loads. Test by asking: *"What superpowers skills do
+  you have?"* — you should see `brainstorming`, `writing-plans`, and others.
+
+If you can't find it, don't worry — we'll install it together in the room.
+
 ---
 
 ## How the workshop folders work
@@ -83,5 +96,6 @@ The facilitator will tell you which folder to open for each module.
 - [ ] Signed in to GitHub
 - [ ] `product-ai-workshop` cloned
 - [ ] Code feature can open the folder and read `sandbox/CLAUDE.md`
+- [ ] Superpowers plugin installed (`/plugin`)
 
 Bring the folder path and your laptop charger. See you there.

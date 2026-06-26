@@ -48,9 +48,9 @@ and notice the guardrails:
 That's the pattern: a subagent has a narrow job, limited tools, and a defined
 output shape.
 
-> **Where this connects:** the `refine` skill in Module 06 can optionally hand its
-> codebase exploration to this same subagent — so the main planning conversation
-> stays clean.
+> **Where this connects:** in Module 06, Superpowers executes a plan with
+> *subagent-driven development* — a fresh subagent per task — the same idea you're
+> seeing here, applied to building, so each task stays in its own clean context.
 
 ---
 

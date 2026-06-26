@@ -34,8 +34,10 @@ src/
 tests/            automated checks, one file per source file
 package.json      project metadata and scripts
 CLAUDE.md         always-on context, auto-loaded by the Code feature (read this — it is the lesson)
-specs/            feature specs (plans) — the artifacts our "factory" produces
 ```
+
+In Module 06, the Superpowers skills write their design spec and plan under
+`docs/superpowers/` here.
 
 ## If a facilitator wants to run it
 
