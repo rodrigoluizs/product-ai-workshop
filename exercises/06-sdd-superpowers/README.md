@@ -97,4 +97,4 @@ through the spec and the plan, without writing a line of code.**
   execute, each producing a durable artifact.
 - Product people own brainstorming and plan review — the decisions that matter.
 - The gates are the point: no code until the design is approved.
-- Learn more: the `superpowers` plugin (official Claude marketplace).
+- Learn more: Superpowers — https://github.com/obra/superpowers

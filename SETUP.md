@@ -101,6 +101,6 @@ The facilitator will tell you which folder to open for each module.
 - [ ] Signed in to GitHub
 - [ ] `product-ai-workshop` cloned
 - [ ] Code feature can open the folder and read `sandbox/CLAUDE.md`
-- [ ] Superpowers plugin installed (`/plugin`)
+- [ ] Superpowers marketplace added and plugin installed (Personal Plugins)
 
 Bring the folder path and your laptop charger. See you there.
