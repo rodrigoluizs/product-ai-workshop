@@ -1,65 +1,78 @@
 # Facilitator Guide
 
-A timed run-of-show for the 4-hour Product AI Workshop. Audience: non-technical
-product people, mixed experience, all on **Claude Desktop**.
+Timed run-of-show for the 4-hour Product AI Workshop. Audience: non-technical
+product people, mixed experience, all using the Claude Desktop **Code feature**.
 
 ## Before the day
 
 - Send [SETUP.md](SETUP.md) **at least 3 days early.** Setup-in-the-room kills the
   first hour. Offer a 20-min drop-in the day before.
-- Have a backup plan for people who didn't finish setup: pair them up, and keep a
-  pre-cloned folder on a USB stick / shared drive.
-- Pre-install the four skills yourself and screenshot each step (Skills menu paths
-  change).
-- Test the **GitHub connector** flow on your own account the morning of.
+- Confirm everyone can access the **Code feature** (paid plan). Pair up anyone who
+  can't.
+- Have a backup pre-cloned folder on a USB stick / shared drive.
+- Do a full dry run yourself: open each `exercise/` folder, create the `.claude/`
+  files, and confirm they load on a **new session** (auto-load happens at session
+  start — restarting matters).
 
 ## Guiding principles
 
 - **They direct, they don't code.** Repeat this. Their job is judgment and
   context, not syntax.
-- **Show, then let them do.** Every module: 1 demo on screen, then they try.
-- **It's okay not to finish.** This is a menu, not a race (inherited from the
-  original bootcamp's design).
-- **Normalize "I broke it."** They almost never can. Show the recovery commands
-  early so fear doesn't build.
+- **Show, then let them do.** Each module: one demo on screen, then they try.
+- **Auto-load is at session start.** The #1 confusion: creating a `.claude/` file
+  mid-session and expecting it to work. Drill "new session to load it."
+- **Normalize "I broke it."** They almost never can. Show the recovery ask early.
 
 ## Run-of-show
 
 | Time | Module | Your job | Watch for |
 | --- | --- | --- | --- |
-| 0:00–0:15 | **Framing** | Set the "you direct" frame. One live demo: a vague prompt vs. a context-rich one. | Don't lecture. Get to the demo fast. |
-| 0:15–0:55 | **01 Git** | Demo the mental-model table, then Exercises A–D. | Terminal panic. Have the recovery block ready. The GitHub-connector exercise is the "wow". |
-| 0:55–1:05 | Break | | |
-| 1:05–1:50 | **02 Context Eng** | Run the release-notes before/after live. Then they rewrite their own. | This is the heart — give it air. Collect 2–3 before/afters to share. |
-| 1:50–2:10 | **03 Projects** | Pirate test live, then a useful Project. | Make sure everyone creates *one* real Project. |
-| 2:10–2:30 | **04 Skills** | Install pirate-speak, trigger it, read the SKILL.md. | The "it triggered itself" moment is the lesson. |
-| 2:30–2:40 | Break | | |
-| 2:40–3:25 | **05 Spec-first** | Install planner+refine. Run planner on parentheses live up to the approach choice, then they continue. | Time sink. Keep Phase-2 questions moving. Demo "implement" yourself. |
-| 3:25–3:45 | **06 What's next** | Walk the ladder table. Keep it short and concrete. | Don't oversell Claude Code; frame it as "later". |
-| 3:45–4:00 | **Wrap** | Hand out [CHEATSHEET.md](CHEATSHEET.md). Each person names one thing they'll use Monday. | End on commitment, not features. |
+| 0:00–0:15 | **Framing** | "You direct." One live demo: vague vs context-rich prompt. | Don't lecture; get to the demo fast. |
+| 0:15–0:50 | **01 Git** | Mental-model table, then Exercises A–D (Claude does the Git). | Terminal panic. Have the recovery ask ready. |
+| 0:50–1:00 | Break | | |
+| 1:00–1:40 | **02 Context + CLAUDE.md** | Release-notes before/after, pirate proof, then the **filing-convention CLAUDE.md** (initiatives/tickets). | The heart — give it air. The "it filed itself" moment is the payoff. Reinforce new-session-to-load. |
+| 1:40–2:10 | **03 Skills** | Build pirate-speak in `.claude/skills/`, new session, trigger it. | "It triggered itself" is the lesson. |
+| 2:10–2:20 | Break | | |
+| 2:20–2:40 | **04 Rules** | Quick pirate-markdown scope demo, then the two doc-style rules on the rough drafts. | Connect back to Module 02 filenames. Keep it light. |
+| 2:40–3:00 | **05 Subagents** | Drop codebase-explorer into `sandbox/`, run it, read its guardrails. | Frame as "delegate, get a summary, not a transcript." |
+| 3:00–3:45 | **06 Spec-first factory** | planner → refine on `sandbox/specs/parentheses.md`; you demo implement. | Time sink. Keep planner's Phase-2 questions moving. |
+| 3:45–4:00 | **07 Hooks + wrap** | Demo the trace hook in `sandbox/`. Hand out the cheat sheet. Each person names one Monday action. | Don't oversell; end on commitment. |
 
-## Module timing cushions
+## Timing cushions
 
-- Git (01) and Spec-first (05) are the two that overrun. If behind: in 01 make
-  Exercise C (GitHub connector) a demo instead of hands-on; in 05 skip Exercise B
-  (refine) and just show the completed solution.
-- Context Engineering (02) should **never** be cut — it's the highest-value hour.
+- **01 Git** and **06 Factory** overrun most. If behind: in 01 make Exercise C a
+  demo; in 06 skip refine (Exercise B) and just show the completed solution.
+- **02 Context** should **never** be cut — highest-value block.
+- **04/05** are "light" by design — keep them to 20 min each.
+
+## The narrative thread (use it out loud)
+
+The workshop builds one coherent story, not seven disconnected tricks:
+
+1. **CLAUDE.md** (02) decides *where* initiative/ticket docs live and how they're
+   named.
+2. **Rules** (04) decide *what's inside* those `-initiative.md` / `-ticket.md` files.
+3. **Skills** (03) package a repeatable procedure.
+4. The **factory** (06) chains skills into planner → refine → implement via a
+   durable spec artifact.
+5. **Subagents** (05) keep exploration tidy; **Hooks** (07) make things happen
+   automatically.
 
 ## Common pitfalls and fixes
 
-- **Filesystem connector can't see files** → wrong folder added, or permissions not
-  granted. Re-add the exact cloned folder; restart Desktop.
-- **Skill won't trigger** → description too vague. Show how trigger phrases in the
-  description fix it.
-- **Planner picks the approach itself** → it shouldn't; if it does, point out the
-  skill rule and re-ask. Good teaching moment about skill discipline.
-- **Git auth prompts** → push them toward the GitHub connector and the web UI;
+- **A `.claude/` file isn't taking effect** → almost always: created mid-session.
+  Start a new session in that folder.
+- **Skill won't trigger** → description too vague. Show how trigger phrases fix it.
+- **Planner picks the approach itself** → it shouldn't; point at the skill rule and
+  re-ask. Good teaching moment about skill discipline.
+- **Rule applies to the wrong files** → check the glob; `**/*-ticket.md` matches
+  nested `initiatives/<slug>/tickets/` too (that's intended).
+- **Git auth prompts** → let Claude handle it in-session, or use the GitHub web UI;
   avoid SSH-key setup in the room.
 
 ## Materials checklist
 
-- [ ] Projector + your Claude Desktop signed in
-- [ ] All four skills pre-installed on your machine
-- [ ] GitHub connector authorized
+- [ ] Projector + your Claude Desktop signed in, Code feature open
+- [ ] Dry-run completed for every module
 - [ ] Printed [CHEATSHEET.md](CHEATSHEET.md) per person
 - [ ] Backup pre-cloned repo on USB / shared drive

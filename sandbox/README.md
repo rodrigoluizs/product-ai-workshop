@@ -33,7 +33,7 @@ src/
   main.ts         the interactive prompt (REPL)
 tests/            automated checks, one file per source file
 package.json      project metadata and scripts
-CONTEXT.md        the context note we hand to Claude (read this — it is the lesson)
+CLAUDE.md         always-on context, auto-loaded by the Code feature (read this — it is the lesson)
 specs/            feature specs (plans) — the artifacts our "factory" produces
 ```
 

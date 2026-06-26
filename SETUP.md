@@ -1,94 +1,87 @@
 # Setup — do this before the workshop
 
-Plan ~20 minutes. None of this requires writing code. If you get stuck, that's
-fine — there is a setup helping hand in the first 15 minutes of the workshop, but
-the more you finish here, the more time we spend learning.
+Plan ~20 minutes. None of this requires writing code. There's a setup helping
+hand in the first 15 minutes of the workshop, but the more you finish here, the
+more time we spend learning.
 
-You'll install four things and connect them:
+You'll install three things and open one folder:
 
-1. Claude Desktop
+1. Claude Desktop (with the **Code feature**)
 2. Git
-3. A GitHub account
-4. This repository on your computer, connected to Claude Desktop
+3. This repository on your computer — opened in the Code feature
 
 ---
 
-## 1. Install Claude Desktop
+## 1. Install Claude Desktop + enable the Code feature
 
-- Download from **https://claude.ai/download** (macOS or Windows).
-- Sign in with your account.
-- Open **Settings → Capabilities** and turn on **Code execution and file
-  creation** (required to use Skills). Skills are uploaded here later.
-- Confirm you can also see **Connectors** in Settings — we'll use those too.
+- Download from **https://claude.ai/download** (macOS or Windows) and sign in.
+- Make sure you can access the **Code** feature (Claude Code inside the Desktop
+  app — it opens a project folder and a terminal). If you don't see it, update to
+  the latest version.
+- The Code feature requires a paid plan (Pro/Max/Team/Enterprise). If you're on a
+  free plan, tell the facilitator — we'll pair you up.
 
-> Skills upload requires a paid plan (Pro/Max/Team/Enterprise). If you're on a
-> free plan, pair up with someone for the Skills modules — you can still do
-> everything else.
-
-> We are **not** using Claude Code (the developer command-line tool) in this
-> workshop. Just the Claude Desktop app.
+> We use the **Code feature**, not the regular chat. The Code feature opens a real
+> project folder and automatically loads its `CLAUDE.md`, skills, and rules —
+> which is the whole point of the workshop.
 
 ## 2. Install Git
 
-Git is the tool that tracks versions of files. You will barely type Git commands
-yourself — Claude will do most of it — but it must be installed.
+Git tracks versions of files. You'll barely type Git yourself — Claude does most
+of it — but it must be installed.
 
-- **macOS:** open the **Terminal** app and run `git --version`. If it's missing,
-  macOS will offer to install the developer tools — accept it.
-- **Windows:** download from **https://git-scm.com/download/win** and install
-  with the default options.
+- **macOS:** open **Terminal** and run `git --version`. If missing, macOS offers
+  to install developer tools — accept.
+- **Windows:** install from **https://git-scm.com/download/win** (default options).
 
-Verify (in Terminal / Git Bash):
+Verify:
 
 ```bash
 git --version
 ```
 
-You should see a version number like `git version 2.x`.
+## 3. Sign in to GitHub
 
-## 3. Create / sign in to GitHub
+- Go to **https://github.com** and sign in (or create a free account). It's where
+  this workshop lives online.
 
-- Go to **https://github.com** and sign in (or create a free account).
-- GitHub is where code lives online. We'll clone this workshop from there.
-
-## 4. Get this repository onto your computer
+## 4. Get this repository and open it in the Code feature
 
 "Cloning" = downloading a copy you can work with.
 
 ```bash
-# pick a folder you'll remember, e.g. your Documents folder, then:
+# pick a folder you'll remember (e.g. your Documents folder), then:
 git clone https://github.com/rodrigoluizs/product-ai-workshop.git
 ```
 
-You now have a `product-ai-workshop` folder. Remember where it is.
+Then, in Claude Desktop's **Code feature**, **open the `product-ai-workshop`
+folder**.
 
-## 5. Connect Claude Desktop to that folder (Filesystem connector)
+Test it: in that session, ask —
 
-This lets Claude **read and write the files** in the workshop folder.
+> "List the files in this folder and read sandbox/CLAUDE.md."
 
-- In Claude Desktop: **Settings → Connectors → Filesystem** (also called
-  "local files" / "directories").
-- Add the `product-ai-workshop` folder you just cloned.
-- Test it: start a new chat and ask:
-  *"List the files in the product-ai-workshop folder and read sandbox/CONTEXT.md."*
-- If Claude can list the files and summarize the context note, you're done. ✅
-
-## 6. (Optional but recommended) GitHub connector
-
-This lets Claude do Git/GitHub actions for you (branches, commits, pull requests).
-
-- **Settings → Connectors → GitHub**, then authorize your account.
-- We use this in Module 01.
+If Claude lists the files and summarizes the calculator's context note, you're
+ready. ✅
 
 ---
 
+## How the workshop folders work
+
+Each module lives in `exercises/<module>/` and usually has:
+
+- **`exercise/`** — your work area. For most modules you'll **open this subfolder**
+  in the Code feature so the `.claude/` files you create there load automatically.
+- **`solution/`** — a reference to compare against.
+
+The facilitator will tell you which folder to open for each module.
+
 ## Setup checklist
 
-- [ ] Claude Desktop installed and signed in
+- [ ] Claude Desktop installed, signed in, **Code feature** available
 - [ ] `git --version` shows a version
 - [ ] Signed in to GitHub
-- [ ] `product-ai-workshop` folder cloned
-- [ ] Filesystem connector can read the folder
-- [ ] (optional) GitHub connector authorized
+- [ ] `product-ai-workshop` cloned
+- [ ] Code feature can open the folder and read `sandbox/CLAUDE.md`
 
 Bring the folder path and your laptop charger. See you there.

@@ -12,15 +12,25 @@ Keep this. It's the whole workshop on one page.
 
 > Bad output? Suspect a missing part above before blaming the model.
 
-## Which tool for the job
+## The mechanism ladder (Code feature)
 
-| Need | Use |
-| --- | --- |
-| Context for one question | Just type it (or attach a file) |
-| Same context/norms across many chats | A **Project** |
-| A repeatable procedure that triggers itself | A **Skill** |
-| Plan a change before building | The **spec-first** flow (planner → refine) |
-| Let Claude do Git for you | The **GitHub connector** |
+| Mechanism | Lives in | Switches on when… |
+| --- | --- | --- |
+| **CLAUDE.md** | folder root | always (loaded at session start) |
+| **Skill** | `.claude/skills/` | a request matches its description |
+| **Rule** | `.claude/rules/` | you work on a file matching its glob |
+| **Subagent** | `.claude/agents/` | the agent delegates a focused job |
+| **Hook** | `.claude/settings.json` | a specific event fires (automatic) |
+
+> All of these **auto-load when you open the folder** — but only at **session
+> start**. Change one? Start a new session.
+
+## The product workflow we built
+
+- **Where docs go** (CLAUDE.md): `initiatives/<slug>/<slug>-initiative.md`;
+  tickets at `initiatives/<slug>/tickets/NN-<slug>-ticket.md`.
+- **What's inside** (Rules): `*-initiative.md` → outcome + success metric;
+  `*-ticket.md` → testable acceptance criteria.
 
 ## Git in plain English
 
@@ -31,36 +41,28 @@ Keep this. It's the whole workshop on one page.
 | Branch | A safe parallel copy to experiment in |
 | Pull Request | "Please review and merge my branch" |
 
-**Golden rule:** work on a branch → open a PR → get a review. Never edit `main`.
+**Golden rule:** branch → commit → PR → review. Never edit `main` directly.
 
-Useful commands:
-```bash
-git status                 # what changed
-git switch -c my-branch    # new branch
-git add . && git commit -m "message"
-git switch main            # back to main
-git restore .              # discard uncommitted changes (undo)
-```
-
-Or just ask Claude (GitHub connector on):
+Or just ask Claude in the Code feature:
 > "Create a branch, make this change, commit it, and open a PR. Show me the link."
 
-## Spec-first flow
+Undo anything:
+> "Discard my uncommitted changes and switch me back to a clean main."
+
+## Spec-first factory
 
 ```
 idea → planner → ## High-Level Plan → refine → ## Refined Plan → implement
 ```
 The hand-off is the **exact heading**. The plan is a document you review — not a
-disposable chat.
+disposable chat. You own the planning stages.
 
 ## Skills: what makes one good
 
 - A **description** written as triggers ("use when the user asks to…").
-- Explicit **rules**.
-- Worked **examples**.
-- A **calibration** note ("more X" / "lighter").
+- Explicit **rules** · worked **examples** · a **calibration** note.
 
 ## One thing to do Monday
 
-Pick one: write a reusable Project for your area · turn a recurring task into a
-Skill · plan your next feature as a spec before building it.
+Pick one: write a `CLAUDE.md` of conventions for your area · turn a recurring task
+into a Skill · plan your next feature as a spec before building it.
