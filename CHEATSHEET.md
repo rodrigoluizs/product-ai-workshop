@@ -57,7 +57,9 @@ Each arrow is a **gate**: no code until you approve the design; no execution unt
 the plan is reviewed. The spec and plan are durable documents, not a disposable
 chat. You own brainstorming and plan review — the decisions that matter.
 
-Install: `/plugin` → `superpowers`. Start with: *"Let's brainstorm <feature>."*
+Install: Customize → Personal Plugins → Personal → Add marketplace →
+`https://github.com/obra/superpowers.git` → Sync → install from the Code tab.
+Start with: *"Let's brainstorm <feature>."*
 
 ## Skills: what makes one good
 

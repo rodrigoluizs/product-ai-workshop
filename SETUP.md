@@ -67,13 +67,18 @@ ready. ✅
 ## 5. Install the Superpowers plugin (for Module 06)
 
 Superpowers is a free, open-source set of Claude skills we use for the spec-first
-module. In the Code feature:
+module. Add its marketplace in Claude Desktop:
 
-- Type **`/plugin`** to open the plugin manager.
-- In the **Discover / marketplace** list, find **`superpowers`** (official Claude
-  marketplace) and install it.
-- Start a new session so it loads. Test by asking: *"What superpowers skills do
-  you have?"* — you should see `brainstorming`, `writing-plans`, and others.
+1. **Customize → Personal Plugins** (the **+** icon) **→ Personal → +** (add) **→
+   Add marketplace**.
+2. Paste this URL and click **Sync**:
+   ```
+   https://github.com/obra/superpowers.git
+   ```
+3. The **`superpowers-dev`** marketplace now appears under **Customize → Personal
+   Plugins → Code** tab. Install the **superpowers** plugin from there.
+4. Start a new session so it loads. Test by asking: *"What superpowers skills do
+   you have?"* — you should see `brainstorming`, `writing-plans`, and others.
 
 If you can't find it, don't worry — we'll install it together in the room.
 

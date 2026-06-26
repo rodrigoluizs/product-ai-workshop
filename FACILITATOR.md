@@ -45,9 +45,10 @@ product people, mixed experience, all using the Claude Desktop **Code feature**.
   plan + execution as a quick demo.
 - **02 Context** should **never** be cut — highest-value block.
 - **04/05** are "light" by design — keep them to 20 min each.
-- Pre-install the Superpowers plugin yourself and confirm the marketplace name on
-  the day; have everyone install it during the Module 05 → 06 transition if they
-  didn't in setup.
+- Pre-install the Superpowers plugin yourself (Customize → Personal Plugins →
+  Personal → Add marketplace → `https://github.com/obra/superpowers.git` → Sync →
+  install from the Code tab). Have everyone who skipped setup install it during the
+  Module 05 → 06 transition.
 
 ## The narrative thread (use it out loud)
 

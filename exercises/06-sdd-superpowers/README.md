@@ -31,9 +31,10 @@ complete. **As a PM you live in the first two stages — and that's the leverage
 
 ## Setup (3 min)
 
-- Install the **Superpowers** plugin (see [SETUP.md](../../SETUP.md) — in the Code
-  feature: `/plugin` → find **superpowers** in the official marketplace → install,
-  then start a new session).
+- Install the **Superpowers** plugin (see [SETUP.md](../../SETUP.md): **Customize →
+  Personal Plugins → Personal → Add marketplace**, paste
+  `https://github.com/obra/superpowers.git`, **Sync**, then install **superpowers**
+  from the **Code** tab and start a new session).
 - Open the [`sandbox/`](../../sandbox/) folder so `CLAUDE.md` (the calculator's
   context) auto-loads.
 
