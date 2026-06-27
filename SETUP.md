@@ -1,73 +1,73 @@
-# Setup — do this before the workshop
+# Setup — before the workshop
 
-Plan ~20 minutes. None of this requires writing code. There's a setup helping
-hand in the first 15 minutes of the workshop, but the more you finish here, the
-more time we spend learning.
+None of this requires writing code. Most of the installing is handled **by
+IT-Ops ahead of time** (you can't install software yourself on a Bonial machine),
+so the main things *you* do are sign in to Claude Desktop and open the repo.
 
-You'll install three things and open one folder:
-
-1. Claude Desktop (with the **Code feature**)
-2. Git
-3. This repository on your computer — opened in the Code feature
+There's a setup helping hand in the first 15 minutes of the workshop, but the
+more is ready beforehand, the more time we spend learning.
 
 ---
 
-## 1. Install Claude Desktop + enable the Code feature
+## 0. IT-Ops prerequisites (request ~1 week ahead)
 
-- Download from **https://claude.ai/download** (macOS or Windows) and sign in.
-- Make sure you can access the **Code** feature (Claude Code inside the Desktop
-  app — it opens a project folder and a terminal). If you don't see it, update to
-  the latest version.
-- The Code feature requires a paid plan (Pro/Max/Team/Enterprise). If you're on a
-  free plan, tell the facilitator — we'll pair you up.
+Bonial machines can't self-install software, so we ask **IT-Ops to pre-install**
+the following on each participant's laptop before the workshop:
+
+- **Git** — version control (Claude does most of the Git work for you, but it must
+  be present).
+- **Python 3** — runs the small sample program in the spec-first module.
+- *(optional)* **GitHub CLI (`gh`)** — only if we decide to do pull requests from
+  the machine; not required for the core exercises.
+
+The facilitator coordinates this request. If your machine already has these, great
+— you can verify in step 3.
+
+## 1. Claude Desktop + the Code feature
+
+- Everyone in P&D has access to Claude AI, and therefore the **Code feature**
+  (Claude Code inside the Desktop app — it opens a project folder and a terminal).
+- Open Claude Desktop, sign in, and confirm you can start a **Code** session.
 
 > We use the **Code feature**, not the regular chat. The Code feature opens a real
 > project folder and automatically loads its `CLAUDE.md`, skills, and rules —
 > which is the whole point of the workshop.
 
-## 2. Install Git
+## 2. GitHub account
 
-Git tracks versions of files. You'll barely type Git yourself — Claude does most
-of it — but it must be installed.
+> ⚠️ **To confirm with Steven/IT:** whether we use **company/organization** GitHub
+> accounts (preferred) or personal ones. Personal accounts must **not** be used to
+> host Bonial artifacts. Your facilitator will tell you which to use before the
+> day — don't create a personal account just for this unless asked.
 
-- **macOS:** open **Terminal** and run `git --version`. If missing, macOS offers
-  to install developer tools — accept.
-- **Windows:** install from **https://git-scm.com/download/win** (default options).
+You do **not** need an account just to get the repo (it's public). An account only
+matters if we do the optional pull-request step.
 
-Verify:
+## 3. Get the repo and open it in the Code feature
 
-```bash
-git --version
-```
-
-## 3. Sign in to GitHub
-
-- Go to **https://github.com** and sign in (or create a free account). It's where
-  this workshop lives online.
-
-## 4. Get this repository and open it in the Code feature
-
-"Cloning" = downloading a copy you can work with.
+The workshop repo is public. Get a copy onto your machine (the facilitator will
+confirm the exact method for your setup — terminal clone, or download as a ZIP
+from GitHub if the terminal is locked down):
 
 ```bash
-# pick a folder you'll remember (e.g. your Documents folder), then:
 git clone https://github.com/rodrigoluizs/product-ai-workshop.git
 ```
 
 Then, in Claude Desktop's **Code feature**, **open the `product-ai-workshop`
-folder**.
+folder** and verify everything is in place by asking:
 
-Test it: in that session, ask —
+> "List the files in this folder, run `git --version` and `python3 --version`, and
+> read sandbox/CLAUDE.md."
 
-> "List the files in this folder and read sandbox/CLAUDE.md."
+If Claude lists the files, shows Git + Python versions, and summarizes the
+calculator's context note, you're ready. ✅ (If Git or Python is missing, that's
+an IT-Ops gap — flag it before the day.)
 
-If Claude lists the files and summarizes the calculator's context note, you're
-ready. ✅
-
-## 5. Install the Superpowers plugin (for Module 06)
+## 4. Install the Superpowers plugin (for Module 06)
 
 Superpowers is a free, open-source set of Claude skills we use for the spec-first
-module. Add its marketplace in Claude Desktop:
+module. It's a **Claude plugin** (not machine software), added inside Claude
+Desktop:
 
 1. **Customize → Personal Plugins** (the **+** icon) **→ Personal → +** (add) **→
    Add marketplace**.
@@ -96,11 +96,11 @@ The facilitator will tell you which folder to open for each module.
 
 ## Setup checklist
 
-- [ ] Claude Desktop installed, signed in, **Code feature** available
-- [ ] `git --version` shows a version
-- [ ] Signed in to GitHub
-- [ ] `product-ai-workshop` cloned
-- [ ] Code feature can open the folder and read `sandbox/CLAUDE.md`
+- [ ] (IT-Ops, ahead of time) Git + Python 3 installed on the machine
+- [ ] Claude Desktop signed in, **Code feature** available
+- [ ] GitHub account approach confirmed with facilitator (company vs personal)
+- [ ] `product-ai-workshop` opened in the Code feature
+- [ ] Verified: files listed, `git --version` + `python3 --version` work, `sandbox/CLAUDE.md` read
 - [ ] Superpowers marketplace added and plugin installed (Personal Plugins)
 
-Bring the folder path and your laptop charger. See you there.
+Bring your laptop charger. See you there.
