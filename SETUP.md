@@ -1,33 +1,32 @@
 # Setup — before the workshop
 
-None of this requires writing code. Most of the installing is handled **by
-IT-Ops ahead of time** (you can't install software yourself on a Bonial machine),
-so the main things *you* do are sign in to Claude Desktop and open the repo.
+None of this requires writing code. The main things you do are sign in to Claude
+Desktop and open the repo; the rest is having a couple of tools available on your
+machine ahead of time.
 
 There's a setup helping hand in the first 15 minutes of the workshop, but the
 more is ready beforehand, the more time we spend learning.
 
 ---
 
-## 0. IT-Ops prerequisites (request ~1 week ahead)
+## 0. Tools your machine needs (ahead of time)
 
-Bonial machines can't self-install software, so we ask **IT-Ops to pre-install**
-the following on each participant's laptop before the workshop:
+The hands-on parts assume these are installed:
 
 - **Git** — version control (Claude does most of the Git work for you, but it must
   be present).
 - **Python 3** — runs the small sample program in the spec-first module.
-- *(optional)* **GitHub CLI (`gh`)** — only if we decide to do pull requests from
-  the machine; not required for the core exercises.
+- *(optional)* **GitHub CLI (`gh`)** — only if you'll open pull requests from the
+  machine; not required for the core exercises.
 
-The facilitator coordinates this request. If your machine already has these, great
-— you can verify in step 3.
+If your machine is locked down and you can't install software yourself, ask your
+IT/admin team to pre-install Git and Python 3 before the workshop. You can verify
+they're present in step 3.
 
 ## 1. Claude Desktop + the Code feature
 
-- Everyone in P&D has access to Claude AI, and therefore the **Code feature**
+- Open Claude Desktop, sign in, and confirm you can start a **Code** session
   (Claude Code inside the Desktop app — it opens a project folder and a terminal).
-- Open Claude Desktop, sign in, and confirm you can start a **Code** session.
 
 > We use the **Code feature**, not the regular chat. The Code feature opens a real
 > project folder and automatically loads its `CLAUDE.md`, skills, and rules —
@@ -35,13 +34,12 @@ The facilitator coordinates this request. If your machine already has these, gre
 
 ## 2. GitHub account
 
-> ⚠️ **To confirm with Steven/IT:** whether we use **company/organization** GitHub
-> accounts (preferred) or personal ones. Personal accounts must **not** be used to
-> host Bonial artifacts. Your facilitator will tell you which to use before the
-> day — don't create a personal account just for this unless asked.
-
 You do **not** need an account just to get the repo (it's public). An account only
-matters if we do the optional pull-request step.
+matters if you do the optional pull-request step.
+
+> If you're attending as part of an organization, check whether you should use an
+> **organization** account rather than a personal one — and avoid putting any
+> work/confidential material in a personal account.
 
 ## 3. Get the repo and open it in the Code feature
 
@@ -60,8 +58,8 @@ folder** and verify everything is in place by asking:
 > read sandbox/CLAUDE.md."
 
 If Claude lists the files, shows Git + Python versions, and summarizes the
-calculator's context note, you're ready. ✅ (If Git or Python is missing, that's
-an IT-Ops gap — flag it before the day.)
+calculator's context note, you're ready. ✅ (If Git or Python is missing, get it
+installed before the day.)
 
 ## 4. Install the Superpowers plugin (for Module 06)
 
@@ -96,9 +94,9 @@ The facilitator will tell you which folder to open for each module.
 
 ## Setup checklist
 
-- [ ] (IT-Ops, ahead of time) Git + Python 3 installed on the machine
+- [ ] Git + Python 3 available on the machine (installed ahead of time)
 - [ ] Claude Desktop signed in, **Code feature** available
-- [ ] GitHub account approach confirmed with facilitator (company vs personal)
+- [ ] GitHub account sorted (only needed for the optional PR step)
 - [ ] `product-ai-workshop` opened in the Code feature
 - [ ] Verified: files listed, `git --version` + `python3 --version` work, `sandbox/CLAUDE.md` read
 - [ ] Superpowers marketplace added and plugin installed (Personal Plugins)

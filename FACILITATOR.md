@@ -5,12 +5,13 @@ product people, mixed experience, all using the Claude Desktop **Code feature**.
 
 ## Before the day
 
-- **Raise the IT-Ops request ~1 week ahead.** Participants can't self-install
-  software, so IT-Ops must pre-install **Git** and **Python 3** on each machine
-  (GitHub CLI optional). This is the single biggest day-of risk — chase it early.
-- **Confirm the GitHub-account approach with Steven:** company/org accounts vs
-  personal (personal accounts must not host Bonial artifacts). The repo is public,
-  so cloning needs no account — only the optional PR step does.
+- **Sort out installs ~1 week ahead.** The hands-on parts need **Git** and
+  **Python 3** on each machine (GitHub CLI optional). If participants' machines are
+  locked down, arrange pre-installation with whoever administers them — this is the
+  single biggest day-of risk, so chase it early.
+- **Decide the GitHub-account approach:** organization vs personal accounts (keep
+  work/confidential material out of personal accounts). The repo is public, so
+  cloning needs no account — only the optional PR step does.
 - Send [SETUP.md](SETUP.md) **at least 3 days early.** Setup-in-the-room kills the
   first hour. Offer a 20-min drop-in the day before.
 - Confirm everyone can access the **Code feature**. Pair up anyone who can't.
