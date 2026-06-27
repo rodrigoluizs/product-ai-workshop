@@ -15,13 +15,13 @@ The hands-on parts assume these are installed:
 
 - **Git** — version control (Claude does most of the Git work for you, but it must
   be present).
+- **GitHub CLI (`gh`)** — used for the GitHub exercises (branches, commits, pull
+  requests). You'll also sign it in to your account (`gh auth login`).
 - **Python 3** — runs the small sample program in the spec-first module.
-- *(optional)* **GitHub CLI (`gh`)** — only if you'll open pull requests from the
-  machine; not required for the core exercises.
 
 If your machine is locked down and you can't install software yourself, ask your
-IT/admin team to pre-install Git and Python 3 before the workshop. You can verify
-they're present in step 3.
+IT/admin team to pre-install Git, the GitHub CLI, and Python 3 before the
+workshop. You can verify they're present in step 3.
 
 ## 1. Claude Desktop + the Code feature
 
@@ -34,8 +34,14 @@ they're present in step 3.
 
 ## 2. GitHub account
 
-You do **not** need an account just to get the repo (it's public). An account only
-matters if you do the optional pull-request step.
+You need a **GitHub account** for the branch / commit / pull-request exercises in
+Module 01. Sign the GitHub CLI in to it:
+
+```bash
+gh auth login
+```
+
+(Follow the browser prompt — no SSH keys needed.)
 
 > If you're attending as part of an organization, check whether you should use an
 > **organization** account rather than a personal one — and avoid putting any
@@ -54,12 +60,12 @@ git clone https://github.com/rodrigoluizs/product-ai-workshop.git
 Then, in Claude Desktop's **Code feature**, **open the `product-ai-workshop`
 folder** and verify everything is in place by asking:
 
-> "List the files in this folder, run `git --version` and `python3 --version`, and
-> read sandbox/CLAUDE.md."
+> "List the files in this folder, run `git --version`, `gh --version`,
+> `gh auth status`, and `python3 --version`, and read sandbox/CLAUDE.md."
 
-If Claude lists the files, shows Git + Python versions, and summarizes the
-calculator's context note, you're ready. ✅ (If Git or Python is missing, get it
-installed before the day.)
+If Claude lists the files, shows the tool versions, confirms `gh` is signed in,
+and summarizes the calculator's context note, you're ready. ✅ (If any tool is
+missing, get it installed before the day.)
 
 ## 4. Install the Superpowers plugin (for Module 06)
 
@@ -94,9 +100,9 @@ The facilitator will tell you which folder to open for each module.
 
 ## Setup checklist
 
-- [ ] Git + Python 3 available on the machine (installed ahead of time)
+- [ ] Git, GitHub CLI (`gh`), and Python 3 available on the machine
+- [ ] `gh auth login` done — `gh auth status` shows you signed in
 - [ ] Claude Desktop signed in, **Code feature** available
-- [ ] GitHub account sorted (only needed for the optional PR step)
 - [ ] `product-ai-workshop` opened in the Code feature
 - [ ] Verified: files listed, `git --version` + `python3 --version` work, `sandbox/CLAUDE.md` read
 - [ ] Superpowers marketplace added and plugin installed (Personal Plugins)

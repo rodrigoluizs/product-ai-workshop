@@ -5,13 +5,13 @@ product people, mixed experience, all using the Claude Desktop **Code feature**.
 
 ## Before the day
 
-- **Sort out installs ~1 week ahead.** The hands-on parts need **Git** and
-  **Python 3** on each machine (GitHub CLI optional). If participants' machines are
-  locked down, arrange pre-installation with whoever administers them — this is the
-  single biggest day-of risk, so chase it early.
-- **Decide the GitHub-account approach:** organization vs personal accounts (keep
-  work/confidential material out of personal accounts). The repo is public, so
-  cloning needs no account — only the optional PR step does.
+- **Sort out installs ~1 week ahead.** The hands-on parts need **Git**, the
+  **GitHub CLI (`gh`)**, and **Python 3** on each machine. If participants'
+  machines are locked down, arrange pre-installation with whoever administers them
+  — this is the single biggest day-of risk, so chase it early.
+- **Every participant needs a GitHub account with `gh` signed in** (`gh auth
+  login`) for the branch/commit/PR exercises. Decide organization vs personal
+  accounts (keep work/confidential material out of personal accounts).
 - Send [SETUP.md](SETUP.md) **at least 3 days early.** Setup-in-the-room kills the
   first hour. Offer a 20-min drop-in the day before.
 - Confirm everyone can access the **Code feature**. Pair up anyone who can't.
@@ -78,8 +78,9 @@ The workshop builds one coherent story, not six disconnected tricks:
   ask it to wait. Reinforces that *you* hold the decision.
 - **Rule applies to the wrong files** → check the glob; `**/*-ticket.md` matches
   nested `initiatives/<slug>/tickets/` too (that's intended).
-- **Git auth prompts** → let Claude handle it in-session, or use the GitHub web UI;
-  avoid SSH-key setup in the room.
+- **Git/GitHub auth prompts** → make sure `gh auth login` was done in setup (browser
+  flow, no SSH keys). If a push/PR prompts for credentials, re-run `gh auth login`
+  rather than setting up SSH in the room.
 
 ## Materials checklist
 

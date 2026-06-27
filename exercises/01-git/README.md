@@ -60,8 +60,10 @@ is the whole safety model.
 > "Push my branch and open a pull request to main with a short description.
 > Give me the link, but do not merge it."
 
-Open the link Claude gives you on GitHub.com. Look at the **Files changed** tab —
-green lines are additions. **Don't merge** (we'll discuss first).
+Under the hood this uses the **GitHub CLI** (`gh`) you signed in during setup —
+the command is `gh pr create`, but you can just describe it in English. Open the
+link Claude gives you on GitHub.com, look at the **Files changed** tab (green lines
+are additions), and **don't merge** (we'll discuss first).
 
 ## Exercise D — Do one by hand (5 min)
 
